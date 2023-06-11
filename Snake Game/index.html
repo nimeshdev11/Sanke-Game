@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.mainconatiner{
+height: 100vh;
+width: 100%;
+background: #62b4b4;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.gameboard{
+width: 100vmin;
+height: 100vmin;
+background: linear-gradient(to left,  #b7b18a, #dbd6a4, #f1e8af );
+border: 6px solid rgb(19, 19, 19);
+border-radius: 4px;
+display: grid;
+grid-template-columns: repeat(16, 1fr);
+grid-template-rows: repeat(16, 1fr);
+
+}
+.score{
+margin-bottom: 30px;
+font-size: 30px;
+background-color: #d76011;
+padding: 5px 30px;
+border-radius: 10px;
+font-weight: 600;
+}
+.snake{
+    background-color: greenyellow;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+background-image: url(/snake.png);
+ background-size: 100% 100%;
+ display: flex;
+justify-content: center;
+align-items: center;
+background-repeat: no-repeat;
+z-index: 22;
+}
+.apple{
+background-image: url(/Apple.png);
+ background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+</style>
+
+</head>
+<body>
+<div class="mainconatiner">
+<div class="score" >Score:<span id="score">00</span></div>
+    <div class="gameboard"></div>
+
+
+</div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
